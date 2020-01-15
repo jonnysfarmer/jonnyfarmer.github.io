@@ -14,9 +14,15 @@ const drawerWidth = 200
 //================================
 const theme = createMuiTheme({
   palette: {
-    primary: indigo, //#4caf50
-    secondary: teal,
-    success: teal,
+    primary: {
+      main: '#24305E'
+    },
+    secondary: {
+      main: '#F76C6C'
+    },
+    info: {
+      main: '#374785'
+    },
   }
 })
 
@@ -65,7 +71,7 @@ const useStyles = makeStyles(theme => ({
     [theme.breakpoints.up('md')]: {
       // the below sets the header to be 100% width on desktop, with the menu appearing below
       zIndex: theme.zIndex.drawer + 1,
-      colorPrimary: theme.palette.success.main
+      colorPrimary: theme.palette.primary.main
     }
   },
   menuButton: {

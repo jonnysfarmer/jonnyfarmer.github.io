@@ -10,8 +10,6 @@ import { useStyles, theme } from '../styles/styles'
 
 function ResponsiveDrawer(props) {
   // eslint-disable-next-line no-unused-vars
-  const history = useHistory()
-  const location = history.location.pathname
   const { container } = props
   const classes = useStyles()
   const [mobileOpen, setMobileOpen] = React.useState(false)

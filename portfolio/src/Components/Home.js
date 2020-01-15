@@ -10,6 +10,17 @@ import { useHistory } from 'react-router-dom'
 import grey from '@material-ui/core/colors/grey'
 import Grid from '@material-ui/core/Grid'
 import Typist from 'react-typist'
+import Icon from '@material-ui/core/Icon'
+import Tooltip from '@material-ui/core/Tooltip';
+
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
+
+import { loadCSS } from 'fg-loadcss';
+
+
+
+
 
 
 
@@ -33,7 +44,7 @@ const useStyles = makeStyles(theme => ({
 
   },
   backgroundColor: {
-    // background: 'linear-gradient(45deg, #00B950 35%, #38ef7d 100%)',
+    // backgroundColor: theme.palette.info.main,
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
@@ -81,16 +92,18 @@ const Home = () => {
   const classes = useStyles()
   const history = useHistory()
 
-  const pushLogin = (e) => {
-    e.preventDefault()
-    history.push('/login/')
+ 
+  React.useEffect(() => {
+    loadCSS(
+      'https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css',
 
-  }
-  const pushRegister = (e) => {
-    e.preventDefault()
-    history.push('/register/')
-
-  }
+      // 'https://use.fontawesome.com/releases/v5.1.0/css/all.css',
+      document.querySelector('#font-awesome-css'),
+    );
+  }, []);
+  
+  // https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
+  
 
   return (
     <div className={classes.backgroundColor}>
@@ -99,17 +112,31 @@ const Home = () => {
         <CssBaseline />
         <Container component="main" maxWidth="sm" className={classes.paper} >
           
-            <Typography component="h1" variant="h2" className={classes.avatar} >
+            <Typography component="h1" variant="h2" 
+            // className={classes.avatar} 
+            color='primary'>
               Jonny Farmer
               
             </Typography>
-            <Typography component="h2" variant="h4" className={classes.avatar} >
+            <Typography component="h2" variant="h4" 
+            // className={classes.avatar} 
+            color='secondary'>
             <Typist cursor={{ hideWhenDone: true }}>
               Junior software developer
             </Typist>
             </Typography>
-          
+            <Box>
+            <Tooltip title="HTML 5">
+              <Icon style={{ fontSize: 30 }} className='devicon-html5-plain' color='secondary'/>
+            </Tooltip>
+            <Icon style={{ fontSize: 30 }} className='devicon-css3-plain' aria-label='React'/>
+            <Icon style={{ fontSize: 30 }} className='devicon-javascript-plain' aria-label='React'/>
+            <Icon style={{ fontSize: 30 }} className='devicon-python-plain' aria-label='React'/>
+            <Icon style={{ fontSize: 30 }} className='devicon-react-original' aria-label='React'/>
 
+
+            </Box>
+    
 
         </Container>
       </Box >
