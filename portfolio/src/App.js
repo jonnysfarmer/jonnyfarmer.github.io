@@ -1,13 +1,20 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import { Switch, Route, HashRouter } from 'react-router-dom'
+import './App.css'
+
+import ResponsiveDrawer from './Components/Navbar'
+import Home from './Components/Home'
 
 function App() {
   return (
-    <div className="App">
-      Hello World
-    </div>
-  );
+    <HashRouter>
+      <ResponsiveDrawer />
+      <Switch>
+        <Route exact path='/' component={Home} />
+
+      </Switch>
+    </HashRouter>
+  )
 }
 
 export default App;
