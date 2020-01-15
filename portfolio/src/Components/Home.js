@@ -9,6 +9,8 @@ import Link from '@material-ui/core/Link'
 import { useHistory } from 'react-router-dom'
 import grey from '@material-ui/core/colors/grey'
 import Grid from '@material-ui/core/Grid'
+import Typist from 'react-typist'
+
 
 
 
@@ -28,9 +30,9 @@ const useStyles = makeStyles(theme => ({
     alignItems: 'center',
     justifyContent: 'center',
     minHeight: '100%',
-  
+
   },
-  backgroundColor:{
+  backgroundColor: {
     // background: 'linear-gradient(45deg, #00B950 35%, #38ef7d 100%)',
     display: 'flex',
     flexDirection: 'column',
@@ -92,17 +94,25 @@ const Home = () => {
 
   return (
     <div className={classes.backgroundColor}>
-    <Box height='100vh' >
-      
-      <CssBaseline />
-      <Container component="main" maxWidth="sm" className={classes.paper} >
-        <Typography component="h1" variant="h2" className={classes.avatar} >
-        Jonny Farmer
-        </Typography>
-       
+      <Box height='100vh' >
 
-      </Container>
-    </Box >
+        <CssBaseline />
+        <Container component="main" maxWidth="sm" className={classes.paper} >
+          
+            <Typography component="h1" variant="h2" className={classes.avatar} >
+              Jonny Farmer
+              
+            </Typography>
+            <Typography component="h2" variant="h4" className={classes.avatar} >
+            <Typist cursor={{ hideWhenDone: true }}>
+              Junior software developer
+            </Typist>
+            </Typography>
+          
+
+
+        </Container>
+      </Box >
     </div>
 
   )
