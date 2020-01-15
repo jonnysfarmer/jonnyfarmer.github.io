@@ -24,10 +24,10 @@ function ResponsiveDrawer(props) {
       <div className={classes.toolbar} />
       <Divider />
       <List>
-        {['About Me', 'Portfolio', 'Contact'].map((elem, i) => (
+        {['About', 'Portfolio', 'Contact'].map((elem, i) => (
           <Link to={`/${elem}`} key={i} className={classes.iconColor}>
             <ListItem>
-              {elem === 'About Me'}
+              {elem === 'About'}
               {elem === 'Portfolio'}
               {elem === 'Contact'}
               <ListItemText>{elem}</ListItemText>
@@ -55,9 +55,9 @@ function ResponsiveDrawer(props) {
                 <MenuIcon />
               </IconButton>
               <Hidden smDown>
-                <Button href="#text-buttons" className={classes.desktopMenuButton}>About Me</Button>
-                <Button href="#text-buttons" className={classes.desktopMenuButton}>Portfolio</Button>
-                <Button href="#text-buttons"className={classes.desktopMenuButton}>Contact</Button>
+                <Button href="/#/about" className={classes.desktopMenuButton}>About Me</Button>
+                <Button href="/#/portfolio" className={classes.desktopMenuButton}>Portfolio</Button>
+                <Button href="/#/contact"className={classes.desktopMenuButton}>Contact</Button>
               </Hidden>
             
           </Toolbar>
