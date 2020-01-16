@@ -5,6 +5,7 @@ import { Link, useHistory } from 'react-router-dom'
 import { AppBar, CssBaseline, Divider, Drawer, Hidden, IconButton, List, ListItem, ListItemText, Toolbar, Button } from '@material-ui/core'
 import { ThemeProvider } from '@material-ui/core/styles'
 import MenuIcon from '@material-ui/icons/Menu'
+import HomeIcon from '@material-ui/icons/Home'
 
 import { useStyles, theme } from '../styles/styles'
 
@@ -16,6 +17,9 @@ function ResponsiveDrawer(props) {
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen)
   }
+
+  const history = useHistory()
+  const location = history.location.pathname
 
   const drawer = (
     <div>
@@ -42,25 +46,32 @@ function ResponsiveDrawer(props) {
       <ThemeProvider theme={theme}>
 
         <AppBar position="fixed" className={classes.appBar}>
-          <Toolbar className={classes.rHS}> 
-              <IconButton
-                color="inherit"
-                aria-label="open drawer"
-                edge="end"
-                onClick={handleDrawerToggle}
-                className={classes.menuButton}
-              >
-                <MenuIcon />
-              </IconButton>
-              <Hidden smDown>
-                <Button href="/#/about" className={classes.desktopMenuButton}>About Me</Button>
-                <Button href="/#/portfolio" className={classes.desktopMenuButton}>Portfolio</Button>
-                <Button href="/#/contact"className={classes.desktopMenuButton}>Contact</Button>
-              </Hidden>
-            
+          <Toolbar className={classes.rHS}>
+            {location !== '/' && <IconButton
+              className={classes.desktopMenuButton}
+              href="/#/"
+            >
+              <HomeIcon />
+            </IconButton>
+            }
+            <IconButton
+              color="inherit"
+              aria-label="open drawer"
+              edge="end"
+              onClick={handleDrawerToggle}
+              className={classes.menuButton}
+            >
+              <MenuIcon />
+            </IconButton>
+            <Hidden smDown>
+              <Button href="/#/about" className={classes.desktopMenuButton}>About Me</Button>
+              <Button href="/#/portfolio" className={classes.desktopMenuButton}>Portfolio</Button>
+              <Button href="/#/contact" className={classes.desktopMenuButton}>Contact</Button>
+            </Hidden>
+
           </Toolbar>
         </AppBar>
-        
+
         <nav className={classes.drawer} aria-label="mailbox folders">
           <Hidden mdUp implementation="css">
             <Drawer
@@ -79,7 +90,7 @@ function ResponsiveDrawer(props) {
               {drawer}
             </Drawer>
           </Hidden>
-          
+
         </nav>
       </ThemeProvider>
     </div>
