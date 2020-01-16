@@ -47,7 +47,7 @@ const useStyles = makeStyles(theme => ({
   },
   titlemargin:{
     paddingTop: theme.spacing(8),
-    marginBottom: theme.spacing(4)
+    marginBottom: theme.spacing(2)
   }
   
 
@@ -149,7 +149,8 @@ const Home = () => {
                   </Hidden>
                   </Grid>
                   </div>
-                  <Hidden mdUp className={classes.spacing}>
+                  <Hidden mdUp>
+                    <div className={classes.spacing}>
                 <Grid container spacing={2}>
                   <Grid item >
                     <Tooltip title="Express" enterTouchDelay='300'>
@@ -182,6 +183,7 @@ const Home = () => {
                     </Tooltip>        
                   </Grid>
                 </Grid>
+                </div>
                 </Hidden>
                 <div className={classes.spacing}>
                 <Grid container spacing={2}>
