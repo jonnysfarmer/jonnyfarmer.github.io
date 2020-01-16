@@ -12,9 +12,11 @@ import Grid from '@material-ui/core/Grid'
 import Typist from 'react-typist'
 import Icon from '@material-ui/core/Icon'
 import Tooltip from '@material-ui/core/Tooltip'
-import { Hidden } from '@material-ui/core'
+import { Hidden, ThemeProvider, Divider } from '@material-ui/core'
 
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
+import { theme } from '../styles/styles'
 
 
 import { loadCSS } from 'fg-loadcss';
@@ -80,40 +82,44 @@ const Home = () => {
   return (
     <div className={classes.backgroundColor}>
       <Box height='100vh' >
-
+        <ThemeProvider theme={theme}>
         <CssBaseline />
         <Container component="main" maxWidth="sm" className={classes.paper} >
           <Box className={classes.titlemargin}>
-            <Typography component="h1" variant="h2"
+            <Typography component="h1" variant="h5"
               // className={classes.avatar} 
-              color='primary' align='center'>
-              Jonny Farmer
+              color='primary' >
+              Hi, I'm Jonny Farmer
 
             </Typography>
-            <Typography component="h2" variant="h4"
+            <Typography component="h2" variant="h6"
               // className={classes.avatar} 
-              color='textSecondary' align='center'>
-              <Typist cursor={{ hideWhenDone: true }}>
-                Junior software developer
-            </Typist>
+              color='textSecondary' >
+                A passionate junior software engineer, with full stack project experience
+                looking for opportunities to work with interesting technologies and
+                maybe some other stuff here....
+                
+
             </Typography>
+            <Divider variant='middle' />
           </Box>
+          
           <Box>
             <div className={classes.spacing}>
               <Grid container spacing={2}>
                 <Grid item >
                   <Tooltip title="HTML 5" enterTouchDelay='300'>
-                    <Icon style={{ fontSize: 40 }} className='devicon-html5-plain'  />
+                    <Icon style={{ fontSize: 40 }} className='devicon-html5-plain' color='secondary' />
                   </Tooltip>
                 </Grid>
                 <Grid item >
                   <Tooltip title="CSS 3" enterTouchDelay='300'>
-                    <Icon style={{ fontSize: 40 }} className='devicon-css3-plain'  />
+                    <Icon style={{ fontSize: 40 }} className='devicon-css3-plain' color='secondary' />
                   </Tooltip>
                 </Grid>
                 <Grid item >
                   <Tooltip title="Javascript" enterTouchDelay='300'>
-                    <Icon style={{ fontSize: 40 }} className='devicon-javascript-plain'  />
+                    <Icon style={{ fontSize: 40 }} className='devicon-javascript-plain' color='secondary' />
                   </Tooltip>
                 </Grid>
                 <Grid item >
@@ -241,6 +247,7 @@ const Home = () => {
 
 
         </Container>
+        </ThemeProvider>
       </Box >
     </div>
 
