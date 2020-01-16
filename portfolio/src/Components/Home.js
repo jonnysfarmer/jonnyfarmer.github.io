@@ -34,7 +34,7 @@ const useStyles = makeStyles(theme => ({
 
   },
   backgroundColor: {
-    // backgroundColor: theme.palette.info.main,
+    // backgroundColor: theme.palette.secondary.main,
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
@@ -43,7 +43,8 @@ const useStyles = makeStyles(theme => ({
   },
   spacing: {
     marginTop: theme.spacing(2),
-    marginBottom: theme.spacing(4)
+    marginBottom: theme.spacing(4),
+    color: theme.palette.secondary.main
   },
   titlemargin: {
     paddingTop: theme.spacing(8),
@@ -102,17 +103,17 @@ const Home = () => {
               <Grid container spacing={2}>
                 <Grid item >
                   <Tooltip title="HTML 5" enterTouchDelay='300'>
-                    <Icon style={{ fontSize: 40 }} className='devicon-html5-plain' color='secondary' />
+                    <Icon style={{ fontSize: 40 }} className='devicon-html5-plain'  />
                   </Tooltip>
                 </Grid>
                 <Grid item >
                   <Tooltip title="CSS 3" enterTouchDelay='300'>
-                    <Icon style={{ fontSize: 40 }} className='devicon-css3-plain' color='secondary' />
+                    <Icon style={{ fontSize: 40 }} className='devicon-css3-plain'  />
                   </Tooltip>
                 </Grid>
                 <Grid item >
                   <Tooltip title="Javascript" enterTouchDelay='300'>
-                    <Icon style={{ fontSize: 40 }} className='devicon-javascript-plain' color='secondary' />
+                    <Icon style={{ fontSize: 40 }} className='devicon-javascript-plain'  />
                   </Tooltip>
                 </Grid>
                 <Grid item >

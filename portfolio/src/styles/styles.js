@@ -1,5 +1,5 @@
 
-import { indigo, teal, red, green } from '@material-ui/core/colors'
+import { indigo, teal, red, green, orange } from '@material-ui/core/colors'
 import { makeStyles, createMuiTheme, withStyles } from '@material-ui/core/styles'
 // import { palette } from '@material-ui/system'
 import Switch from '@material-ui/core/Switch'
@@ -18,7 +18,7 @@ const theme = createMuiTheme({
       main: '#24305E'
     },
     secondary: {
-      main: '#F76C6C'
+      main: '#ff9100'
     },
     info: {
       main: '#374785'
