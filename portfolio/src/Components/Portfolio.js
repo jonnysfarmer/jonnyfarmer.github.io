@@ -1,113 +1,127 @@
-import React from 'react'
-
+import React from "react";
+import { makeStyles } from "@material-ui/core/styles";
+import Stepper from "@material-ui/core/Stepper";
+import Step from "@material-ui/core/Step";
+import StepLabel from "@material-ui/core/StepLabel";
+import StepContent from "@material-ui/core/StepContent";
+import Button from "@material-ui/core/Button";
+import Paper from "@material-ui/core/Paper";
+import Typography from "@material-ui/core/Typography";
+import StepButton from "@material-ui/core/StepButton";
+import { Hidden, ThemeProvider, Divider } from '@material-ui/core'
 import CssBaseline from '@material-ui/core/CssBaseline'
-import Container from '@material-ui/core/Container'
-import { makeStyles } from '@material-ui/core/styles'
-import Typography from '@material-ui/core/Typography'
-import Button from '@material-ui/core/Button'
-import Link from '@material-ui/core/Link'
-import { useHistory } from 'react-router-dom'
-import grey from '@material-ui/core/colors/grey'
-import Grid from '@material-ui/core/Grid'
-import Typist from 'react-typist'
-
-
-
-
-
-
-
-
-
-
 import Box from '@material-ui/core/Box'
-// import { fontWeight } from '@material-ui/system'
+import Container from '@material-ui/core/Container'
+
+import { theme } from '../styles/styles'
 
 const useStyles = makeStyles(theme => ({
-  paper: {
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    justifyContent: 'center',
-    minHeight: '100%',
-
+  root: {
+    width: "100%",
+    marginTop: theme.spacing(8)
   },
-  backgroundColor: {
-    // background: 'linear-gradient(45deg, #00B950 35%, #38ef7d 100%)',
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    justifyContent: 'center'
-
+  button: {
+    marginTop: theme.spacing(1),
+    marginRight: theme.spacing(1)
   },
-  title: {
-    textAlign: 'center',
-    color: grey[50],
-    fontWeight: '400'
-
+  actionsContainer: {
+    marginBottom: theme.spacing(2)
   },
-  copyright: {
-    color: grey[800]
-  },
-  submit: {
-    margin: theme.spacing(5, 0, 2),
-    color: grey[800],
-    backgroundColor: grey[50],
-    '&:hover': {
-      backgroundColor: theme.palette.success.dark
-    }
-  },
-  submitgrey: {
-    margin: theme.spacing(5, 0, 2),
-    color: grey[800],
-    border: '2px solid',
-    '&:hover': {
-      backgroundColor: theme.palette.text.secondary
-    }
-  },
-  avatar: {
-    color: grey[800],
-    marginBottom: 0
+  resetContainer: {
+    padding: theme.spacing(3)
   }
-}))
+}));
 
-
-
-
-
-
-const Portfolio = () => {
-
-  const classes = useStyles()
-  const history = useHistory()
-
-  
-
-  return (
-    <div className={classes.backgroundColor}>
-      <Box height='100vh' >
-
-        <CssBaseline />
-        <Container component="main" maxWidth="sm" className={classes.paper} >
-          
-            <Typography component="h1" variant="h2" className={classes.avatar} >
-              Portfolio
-              
-            </Typography>
-            <Typography component="h2" variant="h4" className={classes.avatar} >
-            <Typist cursor={{ hideWhenDone: true }}>
-              Junior software developer
-            </Typist>
-            </Typography>
-    
-
-        </Container>
-      </Box >
-    </div>
-
-  )
-
-
+function getSteps() {
+  return ["Select campaign settings", "Create an ad group", "Create an ad"];
 }
 
-export default Portfolio
+function getStepContent(step) {
+  switch (step) {
+    case 0:
+      return `For each ad campaign that you create, you can control how much
+              you're willing to spend on clicks and conversions, which networks
+              and geographical locations you want your ads to show on, and more.`;
+    case 1:
+      return "An ad group contains one or more ads which target a shared set of keywords.";
+    case 2:
+      return `Try out different ad text to see what brings in the most customers,
+              and learn how to enhance your ads using features like ad extensions.
+              If you run into any problems with your ads, find out how to tell if
+              they're running and how to resolve approval issues.`;
+    default:
+      return "Unknown step";
+  }
+}
+
+export default function Portfolio() {
+  const classes = useStyles();
+  const [activeStep, setActiveStep] = React.useState(0);
+  const steps = getSteps();
+
+  const handleNext = () => {
+    setActiveStep(prevActiveStep => prevActiveStep + 1);
+  };
+
+  const handleStep = step => () => {
+    console.log('hello')
+    setActiveStep(step);
+  };
+
+  const handleBack = () => {
+    setActiveStep(prevActiveStep => prevActiveStep - 1);
+  };
+
+  const handleReset = () => {
+    setActiveStep(0);
+  };
+
+  return (
+    <div className={classes.root}>
+      <Box height='100vh' >
+        <ThemeProvider theme={theme}>
+          <CssBaseline />
+          <Container component="main" maxWidth="md">
+          <Stepper orientation="vertical" nonLinear activeStep={activeStep}>
+            {steps.map((label, index) => (
+              <Step key={label} color='secondary'>
+                <StepButton onClick={handleStep(index)} color='secondary'>123{label}</StepButton>
+                <StepContent>
+                  <Typography>{getStepContent(index)}</Typography>
+                  <div className={classes.actionsContainer}>
+                    <div>
+                      <Button
+                        disabled={activeStep === 0}
+                        onClick={handleBack}
+                        className={classes.button}
+                      >
+                        Back
+                  </Button>
+                  {activeStep < steps.length -1 ? 
+                      <Button
+                        variant="contained"
+                        color="secondary"
+                        onClick={handleNext}
+                        className={classes.button}
+                      >
+                        Next
+                      </Button>
+                      : 
+                      <Button onClick={handleReset} 
+                      variant="contained"
+                        color="secondary"
+                      className={classes.button}>
+                      Back to first project
+                  </Button> }
+                    </div>
+                  </div>
+                </StepContent>
+              </Step>
+            ))}
+          </Stepper>
+          </Container>
+        </ThemeProvider>
+      </Box>
+    </div>
+  );
+}

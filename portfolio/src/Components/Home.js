@@ -86,7 +86,7 @@ const Home = () => {
         <CssBaseline />
         <Container component="main" maxWidth="sm" className={classes.paper} >
           <Box className={classes.titlemargin}>
-            <Typography component="h1" variant="h5"
+            <Typography component="h1" variant="h4"
               // className={classes.avatar} 
               color='primary' >
               Hi, I'm Jonny Farmer
