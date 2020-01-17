@@ -51,7 +51,12 @@ const useStyles = makeStyles(theme => ({
   titlemargin: {
     paddingTop: theme.spacing(8),
     marginBottom: theme.spacing(2)
+  },
+  textspacing: {
+    marginTop: theme.spacing(2),
+    marginBottom: theme.spacing(2)
   }
+
 
 
 }))
@@ -70,11 +75,8 @@ const Home = () => {
   React.useEffect(() => {
     loadCSS(
       'https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css',
-
-      // 'https://use.fontawesome.com/releases/v5.1.0/css/all.css',
-      document.querySelector('#font-awesome-css'),
-    );
-  }, []);
+    )
+  }, [])
 
   // https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
 
@@ -87,13 +89,12 @@ const Home = () => {
         <Container component="main" maxWidth="sm" className={classes.paper} >
           <Box className={classes.titlemargin}>
             <Typography component="h1" variant="h4"
-              // className={classes.avatar} 
               color='primary' >
               Hi, I'm Jonny Farmer
 
             </Typography>
             <Typography component="h2" variant="h6"
-              // className={classes.avatar} 
+                className={classes.textspacing}
               color='textSecondary' >
                 A passionate junior software engineer, with full stack project experience
                 looking for opportunities to work with interesting technologies and

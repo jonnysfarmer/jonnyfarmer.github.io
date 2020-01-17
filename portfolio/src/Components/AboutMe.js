@@ -10,8 +10,12 @@ import { useHistory } from 'react-router-dom'
 import grey from '@material-ui/core/colors/grey'
 import Grid from '@material-ui/core/Grid'
 import Typist from 'react-typist'
+import Headshot from '../styles/Images/Headshot.jpg'
+import { Hidden, ThemeProvider, Divider } from '@material-ui/core'
 
 
+
+import { theme } from '../styles/styles'
 
 
 
@@ -46,28 +50,11 @@ const useStyles = makeStyles(theme => ({
     fontWeight: '400'
 
   },
-  copyright: {
-    color: grey[800]
-  },
-  submit: {
-    margin: theme.spacing(5, 0, 2),
-    color: grey[800],
-    backgroundColor: grey[50],
-    '&:hover': {
-      backgroundColor: theme.palette.success.dark
-    }
-  },
-  submitgrey: {
-    margin: theme.spacing(5, 0, 2),
-    color: grey[800],
-    border: '2px solid',
-    '&:hover': {
-      backgroundColor: theme.palette.text.secondary
-    }
-  },
-  avatar: {
-    color: grey[800],
-    marginBottom: 0
+  image: {
+    width: '60%',
+    height: '60%',
+    marginTop: theme.spacing(2),
+    marginBottom: theme.spacing(2)
   }
 }))
 
@@ -79,29 +66,30 @@ const useStyles = makeStyles(theme => ({
 const About = () => {
 
   const classes = useStyles()
-  const history = useHistory()
 
   
 
   return (
     <div className={classes.backgroundColor}>
       <Box height='100vh' >
-
+      <ThemeProvider theme={theme}>
         <CssBaseline />
         <Container component="main" maxWidth="sm" className={classes.paper} >
           
-            <Typography component="h1" variant="h2" className={classes.avatar} >
-              About
-              
+            <Typography component="h1" variant="h4" color='primary'>
+              About me! 
             </Typography>
-            <Typography component="h2" variant="h4" className={classes.avatar} >
-            <Typist cursor={{ hideWhenDone: true }}>
-              Junior software developer
-            </Typist>
+            <img src={Headshot} alt='headshot' className={classes.image} ></img>
+            <Typography component='h3' variant='subtitle1' color='textSecondary'>
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
+            ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco 
+            laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit 
+            in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat 
+            cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
             </Typography>
     
-
         </Container>
+        </ThemeProvider>
       </Box >
     </div>
 
