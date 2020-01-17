@@ -33,8 +33,50 @@ const useStyles = makeStyles(theme => ({
 }));
 
 function getSteps() {
-  return ["Select campaign settings", "Create an ad group", "Create an ad"];
+  return ["Remember your meds", "Giftlist", "Park My Bike", 'Project X - Beer', 'PAC-MAN'];
 }
+const projects = [
+  {
+    name: 'Remember your meds',
+    github: 'www',
+    deploy: 'https://gift-list-1-jf.herokuapp.com/',
+    description: 'TBC',
+    
+    
+  },
+  {
+    name: 'Giftlist',
+    github: 'https://github.com/jonnysfarmer/gift-list',
+    deploy: 'https://gift-list-1-jf.herokuapp.com/',
+    description: 'A full stack app. Designed data structure and flow, created backend and our API, consumed Etsy’s API, developed the frontend to allow users to register, login, create, and manage lists of Gifts, including suggesting and saving ideas from Etsy (and in future other stores)',
+
+  },
+  {
+    name: 'Coins', 
+    github: 'https://github.com/jonnysfarmer/coin-project',
+    deploy: 'NA',
+    description: 'an ongoing full-stack personal project using React, Node.js, MongoDB, Express.js.   The project currently shows the top 30 cryptocurrencies, with the ability to show additional information and news on each specific coin.  You can then Register / Log in to create your own portfolios '
+  },
+  {
+    name: 'Park My Bike',
+    github: 'https://github.com/jonnysfarmer/park-my-bike',
+    deploy: 'https://jonnysfarmer.github.io/park-my-bike/',
+    description: 'A mobile first React front end  web app.  Identified multiple APIs to show bike parking locations near the users inputted postcode, with directions from your current location / stated location' 
+  },
+  {
+    name: 'Project X - Beer',
+    github: 'https://github.com/jonnysfarmer/project-x' ,
+    deploy: 'https://jonnysfarmer.github.io/project-x/',
+    description: 'A front end React website, using an unofficial Brew Dog API allowing you to display drinking / tasting notes on each of their beers, as well as brewing information '
+  },
+  {
+    name: 'PAC-Man',
+    github: 'https://github.com/jonnysfarmer/project-1 ',
+    deploy: 'https://jonnysfarmer.github.io/project-1/',
+    description: 'A web based browser game using a grid structure written in Javascript.   Create PAC-MAN, hunting Ghosts, movment and collision logic with win conditions.'
+  }
+
+]
 
 function getStepContent(step) {
   switch (step) {
@@ -72,9 +114,7 @@ export default function Portfolio() {
     setActiveStep(prevActiveStep => prevActiveStep - 1);
   };
 
-  const handleReset = () => {
-    setActiveStep(0);
-  };
+
 
   return (
     <div className={classes.root}>
@@ -83,11 +123,12 @@ export default function Portfolio() {
           <CssBaseline />
           <Container component="main" maxWidth="md">
           <Stepper orientation="vertical" nonLinear activeStep={activeStep}>
-            {steps.map((label, index) => (
-              <Step key={label} color='secondary'>
-                <StepButton onClick={handleStep(index)} color='secondary'>123{label}</StepButton>
+            
+            {projects.map((ele, index) => (
+              <Step key={ele} color='secondary'>
+                <StepButton onClick={handleStep(index)} color='secondary'>{ele.name}</StepButton>
                 <StepContent>
-                  <Typography>{getStepContent(index)}</Typography>
+                  <Typography>{ele.description}</Typography>
                   <div className={classes.actionsContainer}>
                     <div>
                       <Button
@@ -97,7 +138,7 @@ export default function Portfolio() {
                       >
                         Back
                   </Button>
-                  {activeStep < steps.length -1 ? 
+                  {activeStep < steps.length -1 &&
                       <Button
                         variant="contained"
                         color="secondary"
@@ -105,14 +146,14 @@ export default function Portfolio() {
                         className={classes.button}
                       >
                         Next
-                      </Button>
-                      : 
-                      <Button onClick={handleReset} 
-                      variant="contained"
-                        color="secondary"
-                      className={classes.button}>
-                      Back to first project
-                  </Button> }
+                  </Button>}
+                  {/* //     : 
+                  //     <Button onClick={handleReset} 
+                  //     variant="contained"
+                  //       color="secondary"
+                  //     className={classes.button}>
+                  //     Back to first project
+                  // </Button> } */}
                     </div>
                   </div>
                 </StepContent>
