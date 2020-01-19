@@ -8,14 +8,20 @@ import Button from "@material-ui/core/Button";
 import Paper from "@material-ui/core/Paper";
 import Typography from "@material-ui/core/Typography";
 import StepButton from "@material-ui/core/StepButton";
-import { Hidden, ThemeProvider, Divider, Grid, Icon, Tooltip, IconButton } from '@material-ui/core'
+import { Hidden, ThemeProvider, Divider, Grid, Icon, Tooltip, IconButton, CardMedia } from '@material-ui/core'
 import CssBaseline from '@material-ui/core/CssBaseline'
 import Box from '@material-ui/core/Box'
 import Container from '@material-ui/core/Container'
 import LinkIcon from '@material-ui/icons/Link'
 
 import { theme } from '../styles/styles'
-import { loadCSS } from 'fg-loadcss';
+import { loadCSS } from 'fg-loadcss'
+
+import giftlist from '../styles/Images/giftlist.gif'
+import project1 from '../styles/Images/project1.png'
+import meds from '../styles/Images/meds.gif'
+
+
 
 
 const useStyles = makeStyles(theme => ({
@@ -36,27 +42,34 @@ const useStyles = makeStyles(theme => ({
   buttons: {
     padding: theme.spacing(1)
   },
-  background:{
+  background: {
     backgroundColor: '#fafafa'
-  }
+  },
+  img: {
+    maxHeight: '20rem',
+    maxWidth: '100%',
+    textAlign: 'center'
+  },
+  // centerImage:{
+  //   display: 'flex',
+  //   justifyContent: 'center',
+  // }
 }))
 
 
 const projects = [
   {
     name: 'Remember your meds',
-    github: 'www',
-    deploy: 'https://gift-list-1-jf.herokuapp.com/',
+    github: 'https://github.com/jonnysfarmer/remember-your-meds',
+    deploy: 'https://rememberyour-meds.herokuapp.com/',
     description: 'Remember your meds description, need to add',
     tech: [
       'devicon-react-original',
       'devicon-python-plain',
       'devicon-django-plain',
       'devicon-postgresql-plain'
-    ]
-
-
-
+    ],
+    img: meds
   },
   {
     name: 'Giftlist',
@@ -68,7 +81,8 @@ const projects = [
       'devicon-nodejs-plain',
       'devicon-express-original',
       'devicon-mongodb-plain'
-    ]
+    ],
+    img: giftlist
 
   },
   {
@@ -115,8 +129,9 @@ const projects = [
       'devicon-css3-plain',
       'devicon-javascript-plain'
 
-    ]
-  }
+    ],
+    img: project1
+  },
 
 ]
 
@@ -154,17 +169,22 @@ export default function Portfolio() {
         <ThemeProvider theme={theme}>
           <CssBaseline />
           <Container component="main" maxWidth="md">
-          <Typography component="h1" variant="h4"
+            <Typography component="h1" variant="h4"
               align='center'
               color='primary' >
               My Portfolio
 
             </Typography>
+
             <Stepper orientation="vertical" nonLinear activeStep={activeStep} className={classes.background}>
-          
+
               {projects.map((ele, index) => (
                 <Step key={ele} color='secondary'>
-                  <StepButton onClick={handleStep(index)} >{ele.name}</StepButton>
+                  <StepButton onClick={handleStep(index)} >
+                    <Typography component="h3" variant="h6" color='inherit'>
+                      {ele.name} 
+                    </Typography>
+                  </StepButton>
                   <StepContent>
                     <Grid container spacing={0}>
                       <Grid item >
@@ -182,6 +202,9 @@ export default function Portfolio() {
                         </Tooltip>
                       </Grid>
                     </Grid>
+                    <div className={classes.centerImage}>
+                    <img src={ele.img} alt='project img' className={classes.img}></img>
+                    </div>
                     <Typography color='textSecondary'>{ele.description}</Typography>
                     <Grid container spacing={1}>
                       {ele.tech.map((ele, i) => {
