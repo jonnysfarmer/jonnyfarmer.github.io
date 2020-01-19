@@ -47,7 +47,7 @@ const projects = [
     name: 'Remember your meds',
     github: 'www',
     deploy: 'https://gift-list-1-jf.herokuapp.com/',
-    description: 'Remember your meds description',
+    description: 'Remember your meds description, need to add',
     tech: [
       'devicon-react-original',
       'devicon-python-plain',
