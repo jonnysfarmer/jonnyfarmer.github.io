@@ -10,13 +10,12 @@ import { useHistory } from 'react-router-dom'
 import grey from '@material-ui/core/colors/grey'
 import Grid from '@material-ui/core/Grid'
 import Typist from 'react-typist'
+import EmailIcon from '@material-ui/icons/Email'
+import LinkedInIcon from '@material-ui/icons/LinkedIn'
+import GitHubIcon from '@material-ui/icons/GitHub'
+import { Hidden, ThemeProvider, Divider, Icon, Tooltip, IconButton, CardMedia } from '@material-ui/core'
 
-
-
-
-
-
-
+import { theme } from '../styles/styles'
 
 
 
@@ -81,27 +80,60 @@ const Contact = () => {
   const classes = useStyles()
   const history = useHistory()
 
+
   
 
   return (
     <div className={classes.backgroundColor}>
       <Box height='100vh' >
+      <ThemeProvider theme={theme}>
 
         <CssBaseline />
         <Container component="main" maxWidth="sm" className={classes.paper} >
           
-            <Typography component="h1" variant="h2" className={classes.avatar} >
-              Contact ME
+            <Typography component="h1" variant="h4" color='primary' >
+              Contact Me
               
             </Typography>
-            <Typography component="h2" variant="h4" className={classes.avatar} >
-            <Typist cursor={{ hideWhenDone: true }}>
-              Junior software developer
-            </Typist>
+            <Grid container >
+              <Grid Item>
+                   <EmailIcon style={{ fontSize: 30 }} color='secondary'/>
+              </Grid>
+              <Grid Item>
+              <Typography component="h3" variant="subtitle1" color='textSecondary' >
+              john.s.farmer@gmail.com
+              
             </Typography>
-    
+              </Grid>
+
+            </Grid>
+            <Grid container >
+              <Grid Item>
+                   <GitHubIcon style={{ fontSize: 30 }} color='secondary'/>
+              </Grid>
+              <Grid Item>
+              <Typography component="h3" variant="subtitle1" color='textSecondary' >
+              github.com/jonnysfarmer
+              
+            </Typography>
+              </Grid>
+
+            </Grid>
+            <Grid container >
+              <Grid Item>
+                   <LinkedInIcon style={{ fontSize: 30 }} color='secondary'/>
+              </Grid>
+              <Grid Item>
+              <Typography component="h3" variant="subtitle1" color='textSecondary' >
+              linkedin.com/in/jonny-farmer/
+              
+            </Typography>
+              </Grid>
+
+            </Grid>
 
         </Container>
+        </ThemeProvider>
       </Box >
     </div>
 

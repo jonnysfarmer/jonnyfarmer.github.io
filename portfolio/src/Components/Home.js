@@ -13,8 +13,8 @@ import Typist from 'react-typist'
 import Icon from '@material-ui/core/Icon'
 import Tooltip from '@material-ui/core/Tooltip'
 import { Hidden, ThemeProvider, Divider } from '@material-ui/core'
+import Fade from '@material-ui/core/Fade'
 
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 import { theme } from '../styles/styles'
 
@@ -78,7 +78,6 @@ const Home = () => {
     )
   }, [])
 
-  // https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
 
 
   return (
@@ -89,23 +88,31 @@ const Home = () => {
         <Container component="main" maxWidth="sm" className={classes.paper} >
           <Box className={classes.titlemargin}>
             <Typography component="h1" variant="h4"
+            align='center'
               color='primary' >
-              Hi, I'm Jonny Farmer
+               <Typist cursor={{ hideWhenDone: true }} >
+              Hi, I'm Jonny Farmer 
+              </Typist>
 
             </Typography>
             <Typography component="h2" variant="h6"
                 className={classes.textspacing}
-              color='textSecondary' >
+                align='center'
+                color='textSecondary' >
+
                 A passionate junior software engineer, with full stack project experience
-                looking for opportunities to work with interesting technologies and
-                maybe some other stuff here....
-                
+                looking for opportunities to work with interesting technologies as a junior developer
 
             </Typography>
             <Divider variant='middle' />
           </Box>
-          
+          <Fade in={true} timeout={ 2000 }>
           <Box>
+          <Typography component="h2" variant="subtitle1"
+              align='center'
+              color='textSecondary' >
+                Technology stack
+            </Typography>
             <div className={classes.spacing}>
               <Grid container spacing={2}>
                 <Grid item >
@@ -245,6 +252,7 @@ const Home = () => {
               </Grid>
             </div>
           </Box>
+          </Fade>
 
 
         </Container>

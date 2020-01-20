@@ -12,6 +12,8 @@ import CssBaseline from '@material-ui/core/CssBaseline'
 import Box from '@material-ui/core/Box'
 import Container from '@material-ui/core/Container'
 import LinkIcon from '@material-ui/icons/Link'
+import Fade from '@material-ui/core/Fade'
+
 
 import { theme } from '../styles/styles'
 import { loadCSS } from 'fg-loadcss'
@@ -181,17 +183,19 @@ export default function Portfolio() {
               My Work
 
             </Typography>
-
+            <Fade in={true} timeout={ 1000 }>
             <Stepper orientation="vertical" nonLinear activeStep={activeStep} className={classes.background}>
 
               {projects.map((ele, index) => (
                 <Step key={ele} color='secondary'>
                   <StepButton onClick={handleStep(index)} >
                     <Typography component="h3" variant="h6" color='inherit'>
-                      {ele.name} 
+                      {ele.name}
                     </Typography>
                   </StepButton>
+
                   <StepContent>
+
                     <Grid container spacing={0}>
                       <Grid item >
                         <Tooltip title="Link to Github" enterTouchDelay={300}>
@@ -211,14 +215,14 @@ export default function Portfolio() {
                         return (
                           <Grid item key={i}>
                             <IconButton className={classes.buttons} disabled={true}>
-                            <Icon style={{ fontSize: 20 }} className={ele} color='secondary' />
+                              <Icon style={{ fontSize: 20 }} className={ele} color='secondary' />
                             </IconButton>
                           </Grid>
                         )
                       })}
                     </Grid>
                     <div className={classes.centerImage}>
-                    <img src={ele.img} alt='project img' className={classes.img}></img>
+                      <img src={ele.img} alt='project img' className={classes.img}></img>
                     </div>
                     {/* <Grid container spacing={1}>
                       {ele.tech.map((ele, i) => {
@@ -263,6 +267,7 @@ export default function Portfolio() {
                 </Step>
               ))}
             </Stepper>
+            </Fade>
           </Container>
         </ThemeProvider>
       </Box>
