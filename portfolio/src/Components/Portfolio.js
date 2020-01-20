@@ -19,6 +19,10 @@ import { loadCSS } from 'fg-loadcss'
 import giftlist from '../styles/Images/giftlist.gif'
 import project1 from '../styles/Images/project1.png'
 import meds from '../styles/Images/meds.gif'
+import meds2 from '../styles/Images/meds.png'
+import pmb from '../styles/Images/pmb.gif'
+import beers from '../styles/Images/beers.gif'
+import coins from '../styles/Images/coins.gif'
 
 
 
@@ -61,14 +65,14 @@ const projects = [
     name: 'Remember your meds',
     github: 'https://github.com/jonnysfarmer/remember-your-meds',
     deploy: 'https://rememberyour-meds.herokuapp.com/',
-    description: 'Remember your meds description, need to add',
+    description: 'A full stack mobile first app.  Created backend and restful API, created a CRUD process allowing users to create prescriptions, and activate reminders to take medication, book appointments and reorder.  Created backend commands to send texts / emails to active reminders.',
     tech: [
       'devicon-react-original',
       'devicon-python-plain',
       'devicon-django-plain',
       'devicon-postgresql-plain'
     ],
-    img: meds
+    img: meds2
   },
   {
     name: 'Giftlist',
@@ -87,14 +91,15 @@ const projects = [
   {
     name: 'Coins',
     github: 'https://github.com/jonnysfarmer/coin-project',
-    deploy: 'NA',
+    deploy: 'https://github.com/jonnysfarmer/coin-project',
     description: 'An ongoing full-stack personal project using React, Node.js, MongoDB, Express.js.   The project currently shows the top 30 cryptocurrencies, with the ability to show additional information and news on each specific coin.  You can then Register / Log in to create your own portfolios ',
     tech: [
       'devicon-react-original',
       'devicon-nodejs-plain',
       'devicon-express-original',
       'devicon-mongodb-plain'
-    ]
+    ],
+    img: coins
   },
   {
     name: 'Park My Bike',
@@ -105,10 +110,11 @@ const projects = [
       'devicon-react-original',
       'devicon-sass-original'
 
-    ]
+    ],
+    img: pmb
   },
   {
-    name: 'Project X - Beer',
+    name: 'Brewdog',
     github: 'https://github.com/jonnysfarmer/project-x',
     deploy: 'https://jonnysfarmer.github.io/project-x/',
     description: 'A front end React website, using an unofficial Brew Dog API allowing you to display drinking / tasting notes on each of their beers, as well as brewing information ',
@@ -116,7 +122,8 @@ const projects = [
       'devicon-react-original',
       'devicon-css3-plain'
 
-    ]
+    ],
+    img: beers
   },
   {
     name: 'PAC-Man',
@@ -171,7 +178,7 @@ export default function Portfolio() {
             <Typography component="h1" variant="h4"
               align='center'
               color='primary' >
-              My Portfolio
+              My Work
 
             </Typography>
 
@@ -187,34 +194,44 @@ export default function Portfolio() {
                   <StepContent>
                     <Grid container spacing={0}>
                       <Grid item >
-                        <Tooltip title="Link to Github" enterTouchDelay='300'>
+                        <Tooltip title="Link to Github" enterTouchDelay={300}>
                           <IconButton className={classes.buttons} href={ele.github}>
                             <Icon style={{ fontSize: 20 }} className='devicon-github-plain' />
                           </IconButton>
                         </Tooltip>
                       </Grid>
                       <Grid item >
-                        <Tooltip title="Link to deployment" enterTouchDelay='300'>
+                        <Tooltip title="Link to deployment" enterTouchDelay={300}>
                           <IconButton className={classes.buttons} href={ele.deploy}>
                             <LinkIcon style={{ fontSize: 20 }} />
                           </IconButton>
                         </Tooltip>
                       </Grid>
+                      {ele.tech.map((ele, i) => {
+                        return (
+                          <Grid item key={i}>
+                            <IconButton className={classes.buttons} disabled={true}>
+                            <Icon style={{ fontSize: 20 }} className={ele} color='secondary' />
+                            </IconButton>
+                          </Grid>
+                        )
+                      })}
                     </Grid>
                     <div className={classes.centerImage}>
                     <img src={ele.img} alt='project img' className={classes.img}></img>
                     </div>
-                    <Typography color='textSecondary'>{ele.description}</Typography>
-                    <Grid container spacing={1}>
+                    {/* <Grid container spacing={1}>
                       {ele.tech.map((ele, i) => {
                         return (
                           <Grid item >
-                            <Icon style={{ fontSize: 20 }} className={ele} color='secondary' />
+                            <Icon style={{ fontSize: 25 }} className={ele} color='secondary' />
                           </Grid>
                         )
                       })}
 
-                    </Grid>
+                    </Grid> */}
+                    <Typography color='textSecondary'>{ele.description}</Typography>
+
                     <div className={classes.actionsContainer}>
                       <div>
                         <Button
