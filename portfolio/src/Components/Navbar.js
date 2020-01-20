@@ -49,7 +49,7 @@ function ResponsiveDrawer(props) {
           <Toolbar className={classes.rHS}>
             {location !== '/' && <IconButton
               className={classes.desktopMenuButton}
-              href="/#/"
+              href="/jonny/#/"
             >
               <HomeIcon />
             </IconButton>
