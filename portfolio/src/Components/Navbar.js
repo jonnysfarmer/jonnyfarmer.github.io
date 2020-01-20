@@ -64,9 +64,9 @@ function ResponsiveDrawer(props) {
               <MenuIcon />
             </IconButton>
             <Hidden smDown>
-              <Button href="/#/about" className={classes.desktopMenuButton}>About Me</Button>
-              <Button href="/#/portfolio" className={classes.desktopMenuButton}>My Work</Button>
-              <Button href="/#/contact" className={classes.desktopMenuButton}>Contact</Button>
+              <Button href="/jonny/#/about" className={classes.desktopMenuButton}>About Me</Button>
+              <Button href="/jonny/#/portfolio" className={classes.desktopMenuButton}>My Work</Button>
+              <Button href="/jonny/#/contact" className={classes.desktopMenuButton}>Contact</Button>
             </Hidden>
 
           </Toolbar>
