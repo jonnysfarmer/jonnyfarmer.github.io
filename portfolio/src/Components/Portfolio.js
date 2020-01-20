@@ -85,7 +85,8 @@ const projects = [
       'devicon-react-original',
       'devicon-nodejs-plain',
       'devicon-express-original',
-      'devicon-mongodb-plain'
+      'devicon-mongodb-plain',
+      'devicon-sass-original'
     ],
     img: giftlist
 
@@ -93,7 +94,7 @@ const projects = [
   {
     name: 'Coins',
     github: 'https://github.com/jonnysfarmer/coin-project',
-    deploy: 'https://github.com/jonnysfarmer/coin-project',
+    // deploy: 'https://github.com/jonnysfarmer/coin-project',
     description: 'An ongoing full-stack personal project using React, Node.js, MongoDB, Express.js.   The project currently shows the top 30 cryptocurrencies, with the ability to show additional information and news on each specific coin.  You can then Register / Log in to create your own portfolios ',
     tech: [
       'devicon-react-original',
@@ -204,13 +205,14 @@ export default function Portfolio() {
                           </IconButton>
                         </Tooltip>
                       </Grid>
+                      {ele.deploy && 
                       <Grid item >
                         <Tooltip title="Link to deployment" enterTouchDelay={300}>
                           <IconButton className={classes.buttons} href={ele.deploy}>
                             <LinkIcon style={{ fontSize: 20 }} />
                           </IconButton>
                         </Tooltip>
-                      </Grid>
+                      </Grid>}
                       {ele.tech.map((ele, i) => {
                         return (
                           <Grid item key={i}>

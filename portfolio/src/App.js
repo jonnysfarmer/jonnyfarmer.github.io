@@ -1,5 +1,5 @@
 import React from 'react'
-import { Switch, Route, HashRouter } from 'react-router-dom'
+import { Switch, Route, HashRouter, Router } from 'react-router-dom'
 import './App.css'
 
 import ResponsiveDrawer from './Components/Navbar'
