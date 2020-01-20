@@ -201,7 +201,7 @@ export default function Portfolio() {
                       <Grid item >
                         <Tooltip title="Link to Github" enterTouchDelay={300}>
                           <IconButton className={classes.buttons} href={ele.github}>
-                            <Icon style={{ fontSize: 20 }} className='devicon-github-plain' />
+                            <Icon style={{ fontSize: 23 }} className='devicon-github-plain' />
                           </IconButton>
                         </Tooltip>
                       </Grid>
@@ -209,7 +209,7 @@ export default function Portfolio() {
                       <Grid item >
                         <Tooltip title="Link to deployment" enterTouchDelay={300}>
                           <IconButton className={classes.buttons} href={ele.deploy}>
-                            <LinkIcon style={{ fontSize: 20 }} />
+                            <LinkIcon style={{ fontSize: 23 }} />
                           </IconButton>
                         </Tooltip>
                       </Grid>}
@@ -217,7 +217,7 @@ export default function Portfolio() {
                         return (
                           <Grid item key={i}>
                             <IconButton className={classes.buttons} disabled={true}>
-                              <Icon style={{ fontSize: 20 }} className={ele} color='secondary' />
+                              <Icon style={{ fontSize: 23 }} className={ele} color='secondary' />
                             </IconButton>
                           </Grid>
                         )
