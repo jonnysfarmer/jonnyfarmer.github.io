@@ -32,7 +32,7 @@ import coins from '../styles/Images/coins.gif'
 const useStyles = makeStyles(theme => ({
   root: {
     width: "100%",
-    marginTop: theme.spacing(10)
+    marginTop: theme.spacing(12)
   },
   button: {
     marginTop: theme.spacing(1),

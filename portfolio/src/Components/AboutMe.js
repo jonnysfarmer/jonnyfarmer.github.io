@@ -32,7 +32,7 @@ const useStyles = makeStyles(theme => ({
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
-    justifyContent: 'center',
+    marginTop: theme.spacing(12),
     minHeight: '100%',
 
   },
@@ -77,7 +77,7 @@ const About = () => {
         <Container component="main" maxWidth="sm" className={classes.paper} >
           
             <Typography component="h1" variant="h4" color='primary'>
-              About me! 
+              About Me 
             </Typography>
             <img src={Headshot} alt='headshot' className={classes.image} ></img>
             <Typography component='h3' variant='subtitle1' color='textSecondary'>

@@ -108,10 +108,11 @@ const Home = () => {
           </Box>
           <Fade in={true} timeout={ 2000 }>
           <Box>
-          <Typography component="h2" variant="subtitle1"
+          <Typography component="h2" variant="h6"
               align='center'
-              color='textSecondary' >
-                Technology stack
+              color='primary'
+               >
+                Technology Stack
             </Typography>
             <div className={classes.spacing}>
               <Grid container spacing={2}>
