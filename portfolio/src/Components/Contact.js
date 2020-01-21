@@ -1,26 +1,16 @@
 import React from 'react'
 
-import CssBaseline from '@material-ui/core/CssBaseline'
-import Container from '@material-ui/core/Container'
-import { makeStyles } from '@material-ui/core/styles'
-import Typography from '@material-ui/core/Typography'
-import Button from '@material-ui/core/Button'
-import Link from '@material-ui/core/Link'
-import { useHistory } from 'react-router-dom'
-import grey from '@material-ui/core/colors/grey'
-import Grid from '@material-ui/core/Grid'
-import Typist from 'react-typist'
+import { Grid, ThemeProvider, Link, Typography, Container, CssBaseline, Box } from '@material-ui/core'
+
 import EmailIcon from '@material-ui/icons/Email'
 import LinkedInIcon from '@material-ui/icons/LinkedIn'
 import GitHubIcon from '@material-ui/icons/GitHub'
-import { Hidden, ThemeProvider, Divider, Icon, Tooltip, IconButton, CardMedia } from '@material-ui/core'
 
+
+import { makeStyles } from '@material-ui/core/styles'
 import { theme } from '../styles/styles'
 
 
-
-import Box from '@material-ui/core/Box'
-// import { fontWeight } from '@material-ui/system'
 
 const useStyles = makeStyles(theme => ({
   paper: {
@@ -31,67 +21,40 @@ const useStyles = makeStyles(theme => ({
     minHeight: '100%',
 
   },
-  backgroundColor: {
-    // background: 'linear-gradient(45deg, #00B950 35%, #38ef7d 100%)',
+  background: {
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'center'
 
   },
-  title: {
-    textAlign: 'center',
-    color: grey[50],
-    fontWeight: '400'
-
+  margin: {
+    marginLeft: theme.spacing(1)
   },
-  copyright: {
-    color: grey[800]
-  },
-  submit: {
-    margin: theme.spacing(5, 0, 2),
-    color: grey[800],
-    backgroundColor: grey[50],
-    '&:hover': {
-      backgroundColor: theme.palette.success.dark
-    }
-  },
-  submitgrey: {
-    margin: theme.spacing(5, 0, 2),
-    color: grey[800],
-    border: '2px solid',
-    '&:hover': {
-      backgroundColor: theme.palette.text.secondary
-    }
-  },
-  avatar: {
-    color: grey[800],
-    marginBottom: 0
+  titleMargin: {
+    marginBottom: theme.spacing(2)
   }
+
 }))
-
-
-
 
 
 
 const Contact = () => {
 
   const classes = useStyles()
-  const history = useHistory()
 
 
   
 
   return (
-    <div className={classes.backgroundColor}>
+    <div className={classes.background}>
       <Box height='100vh' >
       <ThemeProvider theme={theme}>
 
         <CssBaseline />
         <Container component="main" maxWidth="sm" className={classes.paper} >
           
-            <Typography component="h1" variant="h4" color='primary' >
+            <Typography component="h1" variant="h4" color='primary' className={classes.titleMargin} >
               Contact Me
               
             </Typography>
@@ -99,9 +62,13 @@ const Contact = () => {
               <Grid Item>
                    <EmailIcon style={{ fontSize: 30 }} color='secondary'/>
               </Grid>
-              <Grid Item>
-              <Typography component="h3" variant="subtitle1" color='textSecondary' >
-              john.s.farmer@gmail.com
+              <Grid Item >
+              <Typography component="h3" variant="subtitle1" color='textSecondary' className={classes.margin}>
+              <Link href={'mailto:john.s.farmer@gmail.com'}
+              target="_top"
+              color='inherit'>
+                john.s.farmer@gmail.com
+              </Link>
               
             </Typography>
               </Grid>
@@ -112,8 +79,12 @@ const Contact = () => {
                    <GitHubIcon style={{ fontSize: 30 }} color='secondary'/>
               </Grid>
               <Grid Item>
-              <Typography component="h3" variant="subtitle1" color='textSecondary' >
-              github.com/jonnysfarmer
+              <Typography component="h3" variant="subtitle1" color='textSecondary' className={classes.margin}>
+              <Link href={'https://github.com/jonnysfarmer'}
+              target="_blank"
+              color='inherit'>
+                github.com/jonnysfarmer
+              </Link>
               
             </Typography>
               </Grid>
@@ -124,8 +95,12 @@ const Contact = () => {
                    <LinkedInIcon style={{ fontSize: 30 }} color='secondary'/>
               </Grid>
               <Grid Item>
-              <Typography component="h3" variant="subtitle1" color='textSecondary' >
+              <Typography component="h3" variant="subtitle1" color='textSecondary' className={classes.margin}>
+              <Link href={'https://www.linkedin.com/in/jonny-farmer/'}
+              target="_blank"
+              color='inherit'>
               linkedin.com/in/jonny-farmer/
+              </Link>
               
             </Typography>
               </Grid>

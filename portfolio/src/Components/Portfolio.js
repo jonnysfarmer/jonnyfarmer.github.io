@@ -20,7 +20,6 @@ import { loadCSS } from 'fg-loadcss'
 
 import giftlist from '../styles/Images/giftlist.gif'
 import project1 from '../styles/Images/project1.png'
-import meds from '../styles/Images/meds.gif'
 import meds2 from '../styles/Images/meds.png'
 import pmb from '../styles/Images/pmb.gif'
 import beers from '../styles/Images/beers.gif'
@@ -184,58 +183,50 @@ export default function Portfolio() {
               My Work
 
             </Typography>
-            <Fade in={true} timeout={ 1000 }>
-            <Stepper orientation="vertical" nonLinear activeStep={activeStep} className={classes.background}>
+            <Fade in={true} timeout={1000}>
+              <Stepper orientation="vertical" nonLinear activeStep={activeStep} className={classes.background}>
 
-              {projects.map((ele, index) => (
-                <Step key={ele} color='secondary'>
-                  <StepButton onClick={handleStep(index)} >
-                    <Typography component="h3" variant="h6" color='inherit'>
-                      {ele.name}
-                    </Typography>
-                  </StepButton>
+                {projects.map((ele, index) => (
+                  <Step key={ele} color='secondary'>
+                    <StepButton onClick={handleStep(index)} >
+                      <Typography component="h3" variant="h6" color='inherit'>
+                        {ele.name}
+                      </Typography>
+                    </StepButton>
 
-                  <StepContent>
+                    <StepContent>
 
-                    <Grid container spacing={0}>
-                      <Grid item >
-                        <Tooltip title="Link to Github" enterTouchDelay={300}>
-                          <IconButton className={classes.buttons} href={ele.github}>
-                            <Icon style={{ fontSize: 23 }} className='devicon-github-plain' />
-                          </IconButton>
-                        </Tooltip>
-                      </Grid>
-                      {ele.deploy && 
-                      <Grid item >
-                        <Tooltip title="Link to deployment" enterTouchDelay={300}>
-                          <IconButton className={classes.buttons} href={ele.deploy}>
-                            <LinkIcon style={{ fontSize: 23 }} />
-                          </IconButton>
-                        </Tooltip>
-                      </Grid>}
-                      {ele.tech.map((ele, i) => {
-                        return (
-                          <Grid item key={i}>
-                            <IconButton className={classes.buttons} disabled={true}>
-                              <Icon style={{ fontSize: 23 }} className={ele} color='secondary' />
+                      <Grid container spacing={0}>
+                        <Grid item >
+                          <Tooltip title="Link to Github" enterTouchDelay={300}>
+                            <IconButton className={classes.buttons} href={ele.github} target="_blank" >
+                              <Icon style={{ fontSize: 23 }} className='devicon-github-plain' />
                             </IconButton>
-                          </Grid>
-                        )
-                      })}
-                    </Grid>
-                    <div className={classes.centerImage}>
-                      <img src={ele.img} alt='project img' className={classes.img}></img>
-                    </div>
-                    {/* <Grid container spacing={1}>
-                      {ele.tech.map((ele, i) => {
-                        return (
+                          </Tooltip>
+                        </Grid>
+                        {ele.deploy &&
                           <Grid item >
-                            <Icon style={{ fontSize: 25 }} className={ele} color='secondary' />
-                          </Grid>
-                        )
-                      })}
+                            <Tooltip title="Link to deployment" enterTouchDelay={300}>
+                              <IconButton className={classes.buttons} href={ele.deploy} target="_blank" >
+                                <LinkIcon style={{ fontSize: 23 }} />
+                              </IconButton>
+                            </Tooltip>
+                          </Grid>}
+                        {ele.tech.map((ele, i) => {
+                          return (
+                            <Grid item key={i}>
+                              <IconButton className={classes.buttons} disabled={true}>
+                                <Icon style={{ fontSize: 23 }} className={ele} color='secondary' />
+                              </IconButton>
+                            </Grid>
+                          )
+                        })}
+                      </Grid>
+                      <div className={classes.centerImage}>
+                        <img src={ele.img} alt='project img' className={classes.img}></img>
+                      </div>
 
-                    </Grid> */}
+
                     <Typography color='textSecondary'>{ele.description}</Typography>
 
                     <div className={classes.actionsContainer}>
@@ -273,6 +264,6 @@ export default function Portfolio() {
           </Container>
         </ThemeProvider>
       </Box>
-    </div>
+    </div >
   );
 }
