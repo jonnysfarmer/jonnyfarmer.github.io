@@ -117,7 +117,7 @@ const Home = () => {
                   Technology Stack
             </Typography>
                 <div className={classes.spacing}>
-                  <Grid container spacing={2}>
+                  <Grid container spacing={1}>
                     <Grid item >
                       <Tooltip title="HTML 5" enterTouchDelay='300'>
                         <Icon style={{ fontSize: 40 }} className='devicon-html5-plain' color='secondary' />
@@ -169,7 +169,7 @@ const Home = () => {
                 </div>
                 <Hidden mdUp>
                   <div className={classes.spacing}>
-                    <Grid container spacing={2} alignItems='center'>
+                    <Grid container spacing={1} alignItems='center'>
                       <Grid item >
                         <Tooltip title="Babel" enterTouchDelay='300'>
                           <Icon style={{ fontSize: 40 }} className='devicon-babel-plain' color='secondary' />
@@ -199,7 +199,7 @@ const Home = () => {
                   </div>
                 </Hidden>
                 <div className={classes.spacing}>
-                  <Grid container spacing={2}>
+                  <Grid container spacing={1}>
                     <Hidden smDown>
                       <Grid item >
                         <Tooltip title="Git" enterTouchDelay='300'>
@@ -252,7 +252,10 @@ const Home = () => {
                 </div>
                 <Hidden mdUp >
                   <div className={classes.spacing}>
-                    <Grid container spacing={2} alignItems='center'>
+                    <Grid container spacing={1} alignItems='center'>
+                    <Grid item ></Grid>
+                    <Grid item ></Grid>
+                    <Grid item ></Grid>
                     <Grid item ></Grid>
                     <Grid item ></Grid>
                     <Grid item ></Grid>
