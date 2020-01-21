@@ -47,8 +47,7 @@ const useStyles = makeStyles(theme => ({
     marginTop: theme.spacing(2),
     marginBottom: theme.spacing(4),
     color: theme.palette.secondary.main,
-    justifyContent: 'center',
-    display: 'flex'
+
   },
   titlemargin: {
     paddingTop: theme.spacing(8),
@@ -57,6 +56,12 @@ const useStyles = makeStyles(theme => ({
   textspacing: {
     marginTop: theme.spacing(2),
     marginBottom: theme.spacing(2)
+  },
+  maxWidth:{
+    minWidth: '100%',
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
   }
 
 
@@ -109,7 +114,7 @@ const Home = () => {
               <Divider variant='middle' />
             </Box>
             <Fade in={true} timeout={2000}>
-              <Box>
+              <Box className={classes.maxWidth}>
                 <Typography component="h2" variant="h6"
                   align='center'
                   color='primary'
@@ -117,7 +122,7 @@ const Home = () => {
                   Technology Stack
             </Typography>
                 <div className={classes.spacing}>
-                  <Grid container spacing={1}>
+                  <Grid container spacing={1} >
                     <Grid item >
                       <Tooltip title="HTML 5" enterTouchDelay='300'>
                         <Icon style={{ fontSize: 40 }} className='devicon-html5-plain' color='secondary' />
@@ -253,12 +258,6 @@ const Home = () => {
                 <Hidden mdUp >
                   <div className={classes.spacing}>
                     <Grid container spacing={1} alignItems='center'>
-                    <Grid item ></Grid>
-                    <Grid item ></Grid>
-                    <Grid item ></Grid>
-                    <Grid item ></Grid>
-                    <Grid item ></Grid>
-                    <Grid item ></Grid>
                       <Grid item alignItems='center'>
                         <Tooltip title="Node.js" enterTouchDelay='300'>
                           <Icon style={{ fontSize: 40 }} className='devicon-nodejs-plain' color='secondary' />
