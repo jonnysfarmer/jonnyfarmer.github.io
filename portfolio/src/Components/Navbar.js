@@ -2,7 +2,7 @@ import React from 'react'
 import { Link, useHistory } from 'react-router-dom'
 
 //Material UI Styling
-import { AppBar, CssBaseline, Divider, Drawer, Hidden, IconButton, List, ListItem, ListItemText, Toolbar, Button } from '@material-ui/core'
+import { AppBar, CssBaseline, Divider, Drawer, Hidden, IconButton, List, ListItem, ListItemText, Toolbar, Button, Typography } from '@material-ui/core'
 import { ThemeProvider } from '@material-ui/core/styles'
 import MenuIcon from '@material-ui/icons/Menu'
 import HomeIcon from '@material-ui/icons/Home'
@@ -27,12 +27,12 @@ function ResponsiveDrawer(props) {
       <Divider />
       <List>
         {['About', 'Portfolio', 'Contact'].map((elem, i) => (
-          <Link to={`/${elem}`} key={i} className={classes.iconColor}>
+
+          <Link to={`/${elem}`} key={i} color='primary'>
             <ListItem>
-              {elem === 'About'}
-              {elem === 'Portfolio'}
-              {elem === 'Contact'}
-              <ListItemText>{elem}</ListItemText>
+              <Typography component="h3" variant="subtitle1" color='textSecondary' >
+                {elem}
+              </Typography>
             </ListItem>
           </Link>
         ))}
