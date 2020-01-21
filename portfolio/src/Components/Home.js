@@ -125,50 +125,50 @@ const Home = () => {
                   Technology Stack
             </Typography>
                 <div className={classes.spacing}>
-                  <Grid container spacing={1} wrap='nowrap'>
+                  <Grid container spacing={2} wrap='nowrap'>
                     <Grid item >
-                      <Tooltip title="HTML 5" enterTouchDelay='300'>
+                      <Tooltip title="HTML 5" enterTouchDelay={300}>
                         <Icon style={{ fontSize: 40 }} className='devicon-html5-plain' color='secondary' />
                       </Tooltip>
                     </Grid>
                     <Grid item >
-                      <Tooltip title="CSS 3" enterTouchDelay='300'>
+                      <Tooltip title="CSS 3" enterTouchDelay={300}>
                         <Icon style={{ fontSize: 40 }} className='devicon-css3-plain' color='secondary' />
                       </Tooltip>
                     </Grid>
                     <Grid item >
-                      <Tooltip title="Javascript" enterTouchDelay='300'>
+                      <Tooltip title="Javascript" enterTouchDelay={300}>
                         <Icon style={{ fontSize: 40 }} className='devicon-javascript-plain' color='secondary' />
                       </Tooltip>
                     </Grid>
                     <Grid item >
-                      <Tooltip title="React" enterTouchDelay='300'>
+                      <Tooltip title="React" enterTouchDelay={300}>
                         <Icon style={{ fontSize: 40 }} className='devicon-react-original' color='secondary' />
                       </Tooltip>
                     </Grid>
                     <Grid item >
-                      <Tooltip title="Python" enterTouchDelay='300'>
+                      <Tooltip title="Python" enterTouchDelay={300}>
                         <Icon style={{ fontSize: 40 }} className='devicon-python-plain' color='secondary' />
                       </Tooltip>
                     </Grid>
                     <Hidden smDown>
                       <Grid item >
-                        <Tooltip title="Node.js" enterTouchDelay='300'>
+                        <Tooltip title="Node.js" enterTouchDelay={300}>
                           <Icon style={{ fontSize: 40 }} className='devicon-nodejs-plain' color='secondary' />
                         </Tooltip>
                       </Grid>
                       <Grid item >
-                        <Tooltip title="Express" enterTouchDelay='300'>
+                        <Tooltip title="Express" enterTouchDelay={300}>
                           <Icon style={{ fontSize: 40 }} className='devicon-express-original' color='secondary' />
                         </Tooltip>
                       </Grid>
                       <Grid item >
-                        <Tooltip title="Babel" enterTouchDelay='300'>
+                        <Tooltip title="Babel" enterTouchDelay={300}>
                           <Icon style={{ fontSize: 40 }} className='devicon-babel-plain' color='secondary' />
                         </Tooltip>
                       </Grid>
                       <Grid item >
-                        <Tooltip title="MongoDB" enterTouchDelay='300'>
+                        <Tooltip title="MongoDB" enterTouchDelay={300}>
                           <Icon style={{ fontSize: 40 }} className='devicon-mongodb-plain' color='secondary' />
                         </Tooltip>
                       </Grid>
@@ -177,29 +177,29 @@ const Home = () => {
                 </div>
                 <Hidden mdUp>
                   <div className={classes.spacing}>
-                    <Grid container spacing={1} wrap='nowrap'>
+                    <Grid container spacing={2} wrap='nowrap'>
                       <Grid item >
-                        <Tooltip title="Babel" enterTouchDelay='300'>
+                        <Tooltip title="Babel" enterTouchDelay={300}>
                           <Icon style={{ fontSize: 40 }} className='devicon-babel-plain' color='secondary' />
                         </Tooltip>
                       </Grid>
                       <Grid item >
-                        <Tooltip title="MongoDB" enterTouchDelay='300'>
+                        <Tooltip title="MongoDB" enterTouchDelay={300}>
                           <Icon style={{ fontSize: 40 }} className='devicon-mongodb-plain' color='secondary' />
                         </Tooltip>
                       </Grid>
                       <Grid item >
-                        <Tooltip title="Git" enterTouchDelay='300'>
+                        <Tooltip title="Git" enterTouchDelay={300}>
                           <Icon style={{ fontSize: 40 }} className='devicon-git-plain' color='secondary' />
                         </Tooltip>
                       </Grid>
                       <Grid item >
-                        <Tooltip title="Github" enterTouchDelay='300'>
+                        <Tooltip title="Github" enterTouchDelay={300}>
                           <Icon style={{ fontSize: 40 }} className='devicon-github-plain' color='secondary' />
                         </Tooltip>
                       </Grid>
                       <Grid item >
-                        <Tooltip title="Heroku" enterTouchDelay='300'>
+                        <Tooltip title="Heroku" enterTouchDelay={300}>
                           <Icon style={{ fontSize: 40 }} className='devicon-heroku-original' color='secondary' />
                         </Tooltip>
                       </Grid>
@@ -207,52 +207,52 @@ const Home = () => {
                   </div>
                 </Hidden>
                 <div className={classes.spacing}>
-                  <Grid container spacing={1} wrap='nowrap'>
+                  <Grid container spacing={2} wrap='nowrap'>
                     <Hidden smDown>
                       <Grid item >
-                        <Tooltip title="Git" enterTouchDelay='300'>
+                        <Tooltip title="Git" enterTouchDelay={300}>
                           <Icon style={{ fontSize: 40 }} className='devicon-git-plain' color='secondary' />
                         </Tooltip>
                       </Grid>
                       <Grid item >
-                        <Tooltip title="Github" enterTouchDelay='300'>
+                        <Tooltip title="Github" enterTouchDelay={300}>
                           <Icon style={{ fontSize: 40 }} className='devicon-github-plain' color='secondary' />
                         </Tooltip>
                       </Grid>
                       <Grid item >
-                        <Tooltip title="Heroku" enterTouchDelay='300'>
+                        <Tooltip title="Heroku" enterTouchDelay={300}>
                           <Icon style={{ fontSize: 40 }} className='devicon-heroku-original' color='secondary' />
                         </Tooltip>
                       </Grid>
 
                       <Grid item >
-                        <Tooltip title="Sass" enterTouchDelay='300'>
+                        <Tooltip title="Sass" enterTouchDelay={300}>
                           <Icon style={{ fontSize: 40 }} className='devicon-sass-original' color='secondary' />
                         </Tooltip>
                       </Grid>
                     </Hidden>
                     <Grid item >
-                      <Tooltip title="Mocha" enterTouchDelay='300'>
+                      <Tooltip title="Mocha" enterTouchDelay={300}>
                         <Icon style={{ fontSize: 40 }} className='devicon-mocha-plain' color='secondary' />
                       </Tooltip>
                     </Grid>
                     <Grid item >
-                      <Tooltip title="Postgresql" enterTouchDelay='300'>
+                      <Tooltip title="Postgresql" enterTouchDelay={300}>
                         <Icon style={{ fontSize: 40 }} className='devicon-postgresql-plain' color='secondary' />
                       </Tooltip>
                     </Grid>
                     <Grid item >
-                      <Tooltip title="Trello" enterTouchDelay='300'>
+                      <Tooltip title="Trello" enterTouchDelay={300}>
                         <Icon style={{ fontSize: 40 }} className='devicon-trello-plain' color='secondary' />
                       </Tooltip>
                     </Grid>
                     <Grid item >
-                      <Tooltip title="Django" enterTouchDelay='300'>
+                      <Tooltip title="Django" enterTouchDelay={300}>
                         <Icon style={{ fontSize: 40 }} className='devicon-django-plain' color='secondary' />
                       </Tooltip>
                     </Grid>
                     <Grid item >
-                      <Tooltip title="Visual Studio" enterTouchDelay='300'>
+                      <Tooltip title="Visual Studio" enterTouchDelay={300}>
                         <Icon style={{ fontSize: 40 }} className='devicon-visualstudio-plain' color='secondary' />
                       </Tooltip>
                     </Grid>
@@ -260,19 +260,19 @@ const Home = () => {
                 </div>
                 <Hidden mdUp >
                   <div className={classes.spacing} >
-                    <Grid container spacing={1} wrap='nowrap'>
+                    <Grid container spacing={2} wrap='nowrap'>
                       <Grid item >
-                        <Tooltip title="Node.js" enterTouchDelay='300'>
+                        <Tooltip title="Node.js" enterTouchDelay={300}>
                           <Icon style={{ fontSize: 40 }} className='devicon-nodejs-plain' color='secondary' />
                         </Tooltip>
                       </Grid>
                       <Grid item >
-                        <Tooltip title="Express" enterTouchDelay='300'>
+                        <Tooltip title="Express" enterTouchDelay={300}>
                           <Icon style={{ fontSize: 40 }} className='devicon-express-original' color='secondary' />
                         </Tooltip>
                       </Grid>
                       <Grid item >
-                        <Tooltip title="Sass" enterTouchDelay='300'>
+                        <Tooltip title="Sass" enterTouchDelay={300}>
                           <Icon style={{ fontSize: 40 }} className='devicon-sass-original' color='secondary' />
                         </Tooltip>
                       </Grid>
