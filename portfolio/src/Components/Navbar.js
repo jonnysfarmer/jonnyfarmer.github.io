@@ -1,9 +1,8 @@
 import React from 'react'
 import { Link, useHistory } from 'react-router-dom'
 
-//Material UI Styling
-import { AppBar, CssBaseline, Divider, Drawer, Hidden, IconButton, List, ListItem, ListItemText, Toolbar, Button, Typography } from '@material-ui/core'
-import { ThemeProvider } from '@material-ui/core/styles'
+import { AppBar, CssBaseline, Divider, Drawer, Hidden, IconButton, List, ListItem, ListItemText, Toolbar, Button, Typography, ThemeProvider } from '@material-ui/core'
+
 import MenuIcon from '@material-ui/icons/Menu'
 import HomeIcon from '@material-ui/icons/Home'
 

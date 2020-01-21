@@ -1,23 +1,12 @@
 import React, { useState } from 'react'
 
-import CssBaseline from '@material-ui/core/CssBaseline'
-import Container from '@material-ui/core/Container'
+import { Hidden, ThemeProvider, Divider, Button, Typography, Container, CssBaseline, Link, Box } from '@material-ui/core'
+
 import { makeStyles } from '@material-ui/core/styles'
-import Typography from '@material-ui/core/Typography'
-import Button from '@material-ui/core/Button'
-import Link from '@material-ui/core/Link'
-import { useHistory } from 'react-router-dom'
-import grey from '@material-ui/core/colors/grey'
-import Grid from '@material-ui/core/Grid'
-import Typist from 'react-typist'
-import Headshot from '../styles/Images/Headshot.jpg'
-import { Hidden, ThemeProvider, Divider } from '@material-ui/core'
-
-
-
 import { theme } from '../styles/styles'
 
-import Box from '@material-ui/core/Box'
+import Headshot from '../styles/Images/Headshot.jpg'
+
 
 const useStyles = makeStyles(theme => ({
   paper: {
@@ -37,7 +26,6 @@ const useStyles = makeStyles(theme => ({
   },
   title: {
     textAlign: 'center',
-    color: grey[50],
     fontWeight: '400'
 
   },
@@ -56,7 +44,8 @@ const useStyles = makeStyles(theme => ({
 
 const randomFacts = ['I don’t eat cheese. I’m not vegan, I just don\'t like the taste', 'When I was growing up I wanted to be a vet',
 'I’ve had a motorcycle license since I was 17 but it took me until 30 to pass my car test', 'I love whisky. Japanese is my favourite, anything peaty from Scotland, is a close second',
-'I’m a big fan of Manga and am currently reading One Piece, Tower of God and Sololeveling', 'My first pet was a gecko called Dexter']
+'I’m a big fan of Manga and am currently reading One Piece, Tower of God and Solo Leveling', 'My first pet was a gecko called Dexter',
+'As a Brixton local, I have eaten at almost every restaurant in Brixton Market']
 
 
 
@@ -69,7 +58,7 @@ const About = () => {
   const RandomFact =(e) => {
     e.preventDefault()
   
-    const RandomNum = Math.floor(Math.random() * 6)
+    const RandomNum = Math.floor(Math.random() * 7)
     console.log(RandomNum)
     setRandom(randomFacts[RandomNum])
 
@@ -103,7 +92,7 @@ const About = () => {
               onClick={(e)=>RandomFact(e)}
               className={classes.buttonMargin}
             >
-              Random Fact Generator
+              Random Jonny Fact Generator
           </Button>
           <Typography component='h3' variant='subtitle1' color='secondary' align='center'>
             {random}

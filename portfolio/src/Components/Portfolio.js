@@ -1,20 +1,10 @@
 import React from "react";
+
+import { CssBaseline, Box, Fade, ThemeProvider, Grid, Icon, Tooltip, IconButton, Stepper, Step, StepContent, Button, Typography, StepButton, Container } from '@material-ui/core'
+
+import LinkIcon from '@material-ui/icons/Link';
+
 import { makeStyles } from "@material-ui/core/styles";
-import Stepper from "@material-ui/core/Stepper";
-import Step from "@material-ui/core/Step";
-import StepContent from "@material-ui/core/StepContent";
-import Button from "@material-ui/core/Button";
-import Paper from "@material-ui/core/Paper";
-import Typography from "@material-ui/core/Typography";
-import StepButton from "@material-ui/core/StepButton";
-import { Hidden, ThemeProvider, Divider, Grid, Icon, Tooltip, IconButton, CardMedia } from '@material-ui/core'
-import CssBaseline from '@material-ui/core/CssBaseline'
-import Box from '@material-ui/core/Box'
-import Container from '@material-ui/core/Container'
-import LinkIcon from '@material-ui/icons/Link'
-import Fade from '@material-ui/core/Fade'
-
-
 import { theme } from '../styles/styles'
 import { loadCSS } from 'fg-loadcss'
 

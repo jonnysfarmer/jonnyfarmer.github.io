@@ -1,24 +1,12 @@
 import React from 'react'
 
-import CssBaseline from '@material-ui/core/CssBaseline'
-import Container from '@material-ui/core/Container'
-import { makeStyles } from '@material-ui/core/styles'
-import Typography from '@material-ui/core/Typography'
-import Button from '@material-ui/core/Button'
-import Link from '@material-ui/core/Link'
 import { useHistory } from 'react-router-dom'
-import grey from '@material-ui/core/colors/grey'
-import Grid from '@material-ui/core/Grid'
 import Typist from 'react-typist'
-import Icon from '@material-ui/core/Icon'
-import Tooltip from '@material-ui/core/Tooltip'
-import { Hidden, ThemeProvider, Divider } from '@material-ui/core'
-import Fade from '@material-ui/core/Fade'
 
+import { Hidden, ThemeProvider, Divider, Fade, Tooltip, Icon, Grid, Typography, Container, CssBaseline } from '@material-ui/core'
 
 import { theme } from '../styles/styles'
-
-
+import { makeStyles } from '@material-ui/core/styles'
 import { loadCSS } from 'fg-loadcss';
 
 
