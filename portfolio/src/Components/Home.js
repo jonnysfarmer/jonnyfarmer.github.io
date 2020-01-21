@@ -46,7 +46,8 @@ const useStyles = makeStyles(theme => ({
   spacing: {
     marginTop: theme.spacing(2),
     marginBottom: theme.spacing(4),
-    color: theme.palette.secondary.main,
+    color: theme.palette.secondary.main
+
 
   },
   titlemargin: {
@@ -61,7 +62,9 @@ const useStyles = makeStyles(theme => ({
     minWidth: '100%',
     display: 'flex',
     flexDirection: 'column',
+    // justifyContent: 'center',
     alignItems: 'center',
+
   }
 
 
@@ -122,7 +125,7 @@ const Home = () => {
                   Technology Stack
             </Typography>
                 <div className={classes.spacing}>
-                  <Grid container spacing={1} >
+                  <Grid container spacing={1} wrap='nowrap'>
                     <Grid item >
                       <Tooltip title="HTML 5" enterTouchDelay='300'>
                         <Icon style={{ fontSize: 40 }} className='devicon-html5-plain' color='secondary' />
@@ -174,7 +177,7 @@ const Home = () => {
                 </div>
                 <Hidden mdUp>
                   <div className={classes.spacing}>
-                    <Grid container spacing={1} alignItems='center'>
+                    <Grid container spacing={1} wrap='nowrap'>
                       <Grid item >
                         <Tooltip title="Babel" enterTouchDelay='300'>
                           <Icon style={{ fontSize: 40 }} className='devicon-babel-plain' color='secondary' />
@@ -204,7 +207,7 @@ const Home = () => {
                   </div>
                 </Hidden>
                 <div className={classes.spacing}>
-                  <Grid container spacing={1}>
+                  <Grid container spacing={1} wrap='nowrap'>
                     <Hidden smDown>
                       <Grid item >
                         <Tooltip title="Git" enterTouchDelay='300'>
@@ -256,9 +259,9 @@ const Home = () => {
                   </Grid>
                 </div>
                 <Hidden mdUp >
-                  <div className={classes.spacing}>
-                    <Grid container spacing={1} alignItems='center'>
-                      <Grid item alignItems='center'>
+                  <div className={classes.spacing} >
+                    <Grid container spacing={1} wrap='nowrap'>
+                      <Grid item >
                         <Tooltip title="Node.js" enterTouchDelay='300'>
                           <Icon style={{ fontSize: 40 }} className='devicon-nodejs-plain' color='secondary' />
                         </Tooltip>
