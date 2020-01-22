@@ -125,7 +125,7 @@ const Home = () => {
                       </Tooltip>
                     </Grid>
                     <Grid item >
-                      <Tooltip title="Javascript" enterTouchDelay={300}>
+                      <Tooltip title="JavaScript" enterTouchDelay={300}>
                         <Icon style={{ fontSize: 40 }} className='devicon-javascript-plain' color='secondary' />
                       </Tooltip>
                     </Grid>
