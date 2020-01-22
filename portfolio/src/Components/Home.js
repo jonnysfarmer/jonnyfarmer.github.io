@@ -98,7 +98,7 @@ const Home = () => {
                 align='center'
                 color='textSecondary' >
 
-                A passionate junior software engineer, with full stack project experience
+                A passionate junior software engineer with full stack project experience
                 looking for opportunities to work with interesting technologies as a junior developer
 
             </Typography>
