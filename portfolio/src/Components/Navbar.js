@@ -9,10 +9,11 @@ import HomeIcon from '@material-ui/icons/Home'
 import { useStyles, theme } from '../styles/styles'
 
 function ResponsiveDrawer(props) {
-  // eslint-disable-next-line no-unused-vars
+  
   const { container } = props
   const classes = useStyles()
   const [mobileOpen, setMobileOpen] = React.useState(false)
+
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen)
   }
