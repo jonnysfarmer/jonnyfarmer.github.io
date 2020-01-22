@@ -82,7 +82,7 @@ const About = () => {
                playing squash at the local rec centre.
              <br></br>
               <br></br>
-              After a decade in industry, I am excited to undertake a complete career change from headhunter (I owned an Executive Search Firm with 10 staff and turnover To exceeding £1,000,000) to web developer.
+              After a decade in industry, I am excited to undertake a complete career change from headhunter (I owned an Executive Search Firm with 10 staff and turnover exceeding £1,000,000) to web developer.
              <br></br>
               <br></br>
               Ever the problem solver, as evidenced by master’s degree in Mechanical Engineering, I am fascinated by the challenge of web development on both a practical and creative level.
