@@ -77,7 +77,7 @@ const About = () => {
             </Typography>
             <img src={Headshot} alt='headshot' className={classes.image} ></img>
             <Typography component='h3' variant='subtitle1' color='textSecondary'>
-              I’m the proud father of an energetic little boy, with a second on the way (due Feb 10!)
+              I’m the proud father of an energetic little boy, with a second on the way (due Feb 10!).
               When I’m not chasing my son around the playground, you’ll find me brewing beer at the London Beer Lab or
                playing squash at the local rec centre.
              <br></br>
