@@ -225,7 +225,7 @@ const Home = () => {
                       </Tooltip>
                     </Grid>
                     <Grid item >
-                      <Tooltip title="Postgresql" enterTouchDelay={300}>
+                      <Tooltip title="PostgreSQL" enterTouchDelay={300}>
                         <Icon style={{ fontSize: 40 }} className='devicon-postgresql-plain' color='secondary' />
                       </Tooltip>
                     </Grid>
