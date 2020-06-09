@@ -82,7 +82,7 @@ const About = () => {
                playing squash at the local rec centre.
              <br></br>
               <br></br>
-              After a decade in industry, I am excited to undertake a complete career change from headhunter (I owned an Executive Search Firm with 10 staff and turnover exceeding £1,000,000) to software developer.  I am now working at We Got POP, transforming the entertainment industry.
+              After a decade in industry, I undertook a complete career change from a headhunter (I owned an Executive Search Firm with 10 staff and turnover exceeding £1,000,000) to  a software developer.  I am now working at We Got POP, transforming the entertainment industry.
              <br></br>
               <br></br>
               Ever the problem solver, as evidenced by master’s degree in Mechanical Engineering, I enjoy software development on both a practical and creative level.
