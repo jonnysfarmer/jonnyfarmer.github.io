@@ -28,13 +28,15 @@ function ResponsiveDrawer(props) {
       <List>
         {['About', 'Portfolio', 'Contact'].map((elem, i) => (
 
-          <Link to={`/${elem}`} key={i} color='primary'>
+          // <Link to={`/${elem}`} key={i} color='primary'>
             <ListItem>
-              <Typography component="h3" variant="subtitle1" color='textSecondary' >
+               {/* <Typography component="h3" variant="subtitle1" color='textSecondary' >
                 {elem}
-              </Typography>
+              </Typography> */}
+              <Button href={`/jonny/#/${elem}`}>{elem}</Button>
+
             </ListItem>
-          </Link>
+          // </Link>
         ))}
       </List>
     </div>

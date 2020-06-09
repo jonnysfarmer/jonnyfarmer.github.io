@@ -15,6 +15,7 @@ import Box from '@material-ui/core/Box'
 // import { fontWeight } from '@material-ui/system'
 
 const useStyles = makeStyles(theme => ({
+  offset: theme.mixins.toolbar,
   paper: {
     display: 'flex',
     flexDirection: 'column',
@@ -97,9 +98,7 @@ const Home = () => {
                 className={classes.textspacing}
                 align='center'
                 color='textSecondary' >
-
-                A passionate junior software engineer with full stack project experience
-                looking for opportunities to work with interesting technologies as a junior developer
+                  I am a junior software developer at We Got POP in London
 
             </Typography>
               <Divider variant='middle' />

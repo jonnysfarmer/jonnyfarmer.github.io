@@ -58,22 +58,22 @@ const Contact = () => {
               Contact Me
               
             </Typography>
-            <Grid container >
-              <Grid Item>
+            {/* <Grid container > */}
+              {/* <Grid Item>
                    <EmailIcon style={{ fontSize: 30 }} color='secondary'/>
               </Grid>
               <Grid Item >
               <Typography component="h3" variant="subtitle1" color='textSecondary' className={classes.margin}>
-              <Link href={'mailto:john.s.farmer@gmail.com'}
+              <Link href={'mailto:john.s.farmer@gmail[dot]com'}
               target="_top"
               color='inherit'>
-                john.s.farmer@gmail.com
+                john.s.farmer@gmail[dot]com
               </Link>
               
             </Typography>
               </Grid>
 
-            </Grid>
+            </Grid> */}
             <Grid container >
               <Grid Item>
                    <GitHubIcon style={{ fontSize: 30 }} color='secondary'/>

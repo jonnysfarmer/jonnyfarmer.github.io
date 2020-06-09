@@ -77,15 +77,15 @@ const About = () => {
             </Typography>
             <img src={Headshot} alt='headshot' className={classes.image} ></img>
             <Typography component='h3' variant='subtitle1' color='textSecondary'>
-              I’m the proud father of an energetic little boy, with a second on the way (due Feb 10!).
+              I’m the proud father of two energetic little boy's.
               When I’m not chasing my son around the playground, you’ll find me brewing beer at the London Beer Lab or
                playing squash at the local rec centre.
              <br></br>
               <br></br>
-              After a decade in industry, I am excited to undertake a complete career change from headhunter (I owned an Executive Search Firm with 10 staff and turnover exceeding £1,000,000) to web developer.
+              After a decade in industry, I am excited to undertake a complete career change from headhunter (I owned an Executive Search Firm with 10 staff and turnover exceeding £1,000,000) to software developer.  I am now working at We Got POP, transforming the entertainment industry.
              <br></br>
               <br></br>
-              Ever the problem solver, as evidenced by master’s degree in Mechanical Engineering, I am fascinated by the challenge of web development on both a practical and creative level.
+              Ever the problem solver, as evidenced by master’s degree in Mechanical Engineering, I enjoy software development on both a practical and creative level.
             <br></br>
               <br></br>
               Want to more about me? Have a look below...
