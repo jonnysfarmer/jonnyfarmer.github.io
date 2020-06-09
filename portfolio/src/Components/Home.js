@@ -98,7 +98,7 @@ const Home = () => {
                 className={classes.textspacing}
                 align='center'
                 color='textSecondary' >
-                  I am a junior software developer at We Got POP in London
+                  A junior software developer at We Got POP in London
 
             </Typography>
               <Divider variant='middle' />
